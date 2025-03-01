@@ -1,0 +1,1498 @@
+File Index Mapping
+=================
+
+1: tests/test_basic.py
+  Symbols:
+    - test_options_work (function) at line 30
+    - test_options_on_multiple_rules (function) at line 40
+    - test_method_route (function) at line 54
+    - test_method_route_no_methods (function) at line 65
+    - test_provide_automatic_options_attr (function) at line 70
+    - test_provide_automatic_options_kwarg (function) at line 92
+    - test_request_dispatching (function) at line 129
+    - test_disallow_string_for_allowed_methods (function) at line 152
+    - test_url_mapping (function) at line 157
+    - test_werkzeug_routing (function) at line 193
+    - test_endpoint_decorator (function) at line 214
+    - test_session (function) at line 234
+    - test_session_path (function) at line 257
+    - test_session_using_application_root (function) at line 269
+    - test_session_using_session_settings (function) at line 291
+    - test_session_using_samesite_attribute (function) at line 334
+    - test_missing_session (function) at line 361
+    - test_session_secret_key_fallbacks (function) at line 374
+    - test_session_expiration (function) at line 395
+    - test_session_stored_last (function) at line 427
+    - test_session_special_types (function) at line 441
+    - test_session_cookie_setting (function) at line 472
+    - test_session_vary_cookie (function) at line 513
+    - test_session_refresh_vary (function) at line 574
+    - test_flashes (function) at line 591
+    - test_extended_flashing (function) at line 600
+    - test_request_processing (function) at line 681
+    - test_request_preprocessing_early_return (function) at line 706
+    - test_after_request_processing (function) at line 733
+    - test_teardown_request_handler (function) at line 748
+    - test_teardown_request_handler_debug_mode (function) at line 766
+    - test_teardown_request_handler_error (function) at line 784
+    - test_before_after_request_order (function) at line 822
+    - test_error_handling (function) at line 860
+    - test_error_handling_processing (function) at line 898
+    - test_baseexception_error_handling (function) at line 919
+    - test_before_request_and_routing_errors (function) at line 930
+    - test_user_error_handling (function) at line 944
+    - test_http_error_subclass_handling (function) at line 960
+    - test_errorhandler_precedence (function) at line 992
+    - test_trap_bad_request_key_error (function) at line 1029
+    - test_trapping_of_all_http_exceptions (function) at line 1060
+    - test_error_handler_after_processor_error (function) at line 1071
+    - test_enctype_debug_helper (function) at line 1100
+    - test_response_types (function) at line 1115
+    - test_response_type_errors (function) at line 1209
+    - test_make_response (function) at line 1258
+    - test_make_response_with_response_instance (function) at line 1280
+    - test_jsonify_no_prettyprint (function) at line 1302
+    - test_jsonify_mimetype (function) at line 1310
+    - test_json_dump_dataclass (function) at line 1317
+    - test_jsonify_args_and_kwargs_check (function) at line 1326
+    - test_url_generation (function) at line 1332
+    - test_build_error_handler (function) at line 1344
+    - test_build_error_handler_reraise (function) at line 1370
+    - test_url_for_passes_special_values_to_build_error_handler (function) at line 1381
+    - test_static_files (function) at line 1396
+    - test_static_url_path (function) at line 1405
+    - test_static_url_path_with_ending_slash (function) at line 1416
+    - test_static_url_empty_path (function) at line 1427
+    - test_static_url_empty_path_default (function) at line 1434
+    - test_static_folder_with_pathlib_path (function) at line 1441
+    - test_static_folder_with_ending_slash (function) at line 1450
+    - test_static_route_with_host_matching (function) at line 1461
+    - test_request_locals (function) at line 1482
+    - test_server_name_matching (function) at line 1495
+    - test_server_name_subdomain (function) at line 1529
+    - test_exception_propagation (function) at line 1575
+    - test_werkzeug_passthrough_errors (function) at line 1595
+    - test_url_processors (function) at line 1609
+    - test_inject_blueprint_url_defaults (function) at line 1638
+    - test_nonascii_pathinfo (function) at line 1662
+    - test_no_setup_after_first_request (function) at line 1671
+    - test_routing_redirect_debugging (function) at line 1686
+    - test_route_decorator_custom_endpoint (function) at line 1706
+    - test_get_method_on_g (function) at line 1731
+    - test_g_iteration_protocol (function) at line 1739
+    - test_subdomain_basic_support (function) at line 1747
+    - test_subdomain_matching (function) at line 1767
+    - test_subdomain_matching_with_ports (function) at line 1780
+    - test_subdomain_matching_other_name (function) at line 1794
+    - test_multi_route_rules (function) at line 1817
+    - test_multi_route_class_views (function) at line 1829
+    - test_run_defaults (function) at line 1845
+    - test_run_server_port (function) at line 1857
+    - test_run_from_config (function) at line 1882
+    - test_max_cookie_size (function) at line 1894
+    - test_app_freed_on_zero_refcount (function) at line 1925
+    - index (function) at line 1835
+    - index_put (function) at line 46
+    - hello (function) at line 1334
+    - index2 (function) at line 980
+    - more (function) at line 163
+    - options (function) at line 166
+    - bar (function) at line 223
+    - set (function) at line 236
+    - get (function) at line 520
+    - PrefixPathMiddleware (class) at line 270
+    - clear (function) at line 532
+    - expect_exception (function) at line 364
+    - set_session (function) at line 515
+    - get_session (function) at line 381
+    - test (function) at line 615
+    - modify_session (function) at line 429
+    - dump_session_contents (function) at line 446
+    - bump (function) at line 476
+    - read (function) at line 482
+    - run_test (function) at line 485
+    - getitem (function) at line 524
+    - setdefault (function) at line 528
+    - vary_cookie_header_set (function) at line 537
+    - vary_header_set (function) at line 544
+    - no_vary_header (function) at line 551
+    - expect (function) at line 554
+    - login (function) at line 576
+    - ignored (function) at line 582
+    - test_with_categories (function) at line 625
+    - test_filter (function) at line 636
+    - test_filters (function) at line 644
+    - test_filters2 (function) at line 655
+    - before_request (function) at line 1075
+    - after_request (function) at line 1080
+    - before_request1 (function) at line 710
+    - before_request2 (function) at line 714
+    - before_request3 (function) at line 719
+    - teardown_request (function) at line 770
+    - root (function) at line 775
+    - teardown_request1 (function) at line 789
+    - teardown_request2 (function) at line 801
+    - fails (function) at line 813
+    - before1 (function) at line 826
+    - before2 (function) at line 830
+    - after1 (function) at line 834
+    - after2 (function) at line 839
+    - finish1 (function) at line 844
+    - finish2 (function) at line 848
+    - not_found (function) at line 864
+    - internal_server_error (function) at line 1091
+    - forbidden (function) at line 872
+    - error (function) at line 880
+    - error2 (function) at line 884
+    - broken_func (function) at line 923
+    - attach_something (function) at line 932
+    - return_something (function) at line 936
+    - MyException (class) at line 945
+    - handle_my_exception (function) at line 949
+    - ForbiddenSubclass (class) at line 961
+    - handle_forbidden_subclass (function) at line 965
+    - handle_403 (function) at line 970
+    - index1 (function) at line 976
+    - index3 (function) at line 984
+    - E1 (class) at line 993
+    - E2 (class) at line 996
+    - E3 (class) at line 999
+    - handle_e2 (function) at line 1003
+    - handle_exception (function) at line 1007
+    - raise_e1 (function) at line 1011
+    - raise_e3 (function) at line 1015
+    - fail (function) at line 1064
+    - allow_abort (function) at line 1038
+    - from_text (function) at line 1117
+    - from_bytes (function) at line 1121
+    - from_full_tuple (function) at line 1125
+    - from_text_headers (function) at line 1133
+    - from_text_status (function) at line 1137
+    - from_response_headers (function) at line 1141
+    - from_response_status (function) at line 1150
+    - from_wsgi (function) at line 1154
+    - from_dict (function) at line 1158
+    - from_list (function) at line 1162
+    - from_none (function) at line 1214
+    - from_small_tuple (function) at line 1218
+    - from_large_tuple (function) at line 1222
+    - from_bad_type (function) at line 1226
+    - from_bad_wsgi (function) at line 1230
+    - handler (function) at line 1383
+    - handler_raises_build_error (function) at line 1372
+    - catch_all (function) at line 1454
+    - subdomain (function) at line 1538
+    - run_simple_mock (function) at line 1885
+    - add_language_code (function) at line 1611
+    - pull_lang_code (function) at line 1618
+    - about (function) at line 1626
+    - something_else (function) at line 1630
+    - bp_defaults (function) at line 1642
+    - view (function) at line 1646
+    - user (function) at line 1690
+    - foo (function) at line 737
+    - for_bar (function) at line 1714
+    - for_bar_foo (function) at line 1718
+    - normal_index (function) at line 1753
+    - test_index (function) at line 1757
+    - View (class) at line 1830
+    - __init__ (function) at line 1831
+    - __call__ (function) at line 275
+
+2: tests/conftest.py
+  Symbols:
+    - _standard_os_environ (function) at line 13
+    - _reset_os_environ (function) at line 38
+    - app (function) at line 46
+    - app_ctx (function) at line 56
+    - req_ctx (function) at line 62
+    - client (function) at line 68
+    - test_apps (function) at line 73
+    - leak_detector (function) at line 86
+    - limit_loader (function) at line 100
+    - modules_tmp_path (function) at line 131
+    - modules_tmp_path_prefix (function) at line 140
+    - site_packages (function) at line 146
+    - purge_module (function) at line 156
+    - LimitedLoader (class) at line 113
+    - get_loader (function) at line 124
+    - inner (function) at line 157
+    - __init__ (function) at line 114
+    - __getattr__ (function) at line 117
+
+3: tests/test_converters.py
+  Symbols:
+    - test_custom_converters (function) at line 8
+    - test_context_available (function) at line 29
+    - ListConverter (class) at line 9
+    - index (function) at line 39
+    - ContextConverter (class) at line 30
+    - to_python (function) at line 31
+    - to_url (function) at line 13
+
+4: tests/test_logging.py
+  Symbols:
+    - reset_logging (function) at line 13
+    - test_logger (function) at line 36
+    - test_logger_debug (function) at line 42
+    - test_existing_handler (function) at line 48
+    - test_wsgi_errors_stream (function) at line 54
+    - test_has_level_handler (function) at line 70
+    - test_log_view_exception (function) at line 86
+    - index (function) at line 88
+
+5: tests/test_signals.py
+  Symbols:
+    - test_template_rendered (function) at line 4
+    - test_before_render_template (function) at line 25
+    - test_request_signals (function) at line 50
+    - test_request_exception_signal (function) at line 95
+    - test_appcontext_signals (function) at line 115
+    - test_flash_signal (function) at line 139
+    - test_appcontext_tearing_down_signal (function) at line 163
+    - index (function) at line 171
+    - record (function) at line 147
+    - before_request_signal (function) at line 54
+    - after_request_signal (function) at line 57
+    - before_request_handler (function) at line 62
+    - after_request_handler (function) at line 66
+    - record_push (function) at line 118
+    - record_pop (function) at line 121
+    - record_teardown (function) at line 167
+
+6: tests/test_request.py
+  Symbols:
+    - test_max_content_length (function) at line 9
+    - test_limit_config (function) at line 25
+    - test_trusted_hosts_config (function) at line 57
+    - index (function) at line 61
+    - catcher (function) at line 18
+
+7: tests/test_async.py
+  Symbols:
+    - AppError (class) at line 14
+    - BlueprintError (class) at line 18
+    - AsyncView (class) at line 22
+    - AsyncMethodView (class) at line 30
+    - _async_app (function) at line 41
+    - test_async_route (function) at line 82
+    - test_async_error_handler (function) at line 91
+    - test_async_before_after_request (function) at line 97
+    - index (function) at line 106
+    - bp_index (function) at line 123
+
+8: tests/test_session_interface.py
+  Symbols:
+    - test_open_session_with_endpoint (function) at line 6
+    - MySessionInterface (class) at line 12
+    - index (function) at line 24
+    - save_session (function) at line 13
+    - open_session (function) at line 16
+
+9: tests/test_instance_config.py
+  Symbols:
+    - test_explicit_instance_paths (function) at line 8
+    - test_uninstalled_module_paths (function) at line 16
+    - test_uninstalled_package_paths (function) at line 30
+    - test_uninstalled_namespace_paths (function) at line 46
+    - test_installed_module_paths (function) at line 65
+    - test_installed_package_paths (function) at line 80
+    - test_prefix_package_paths (function) at line 99
+    - create_namespace (function) at line 47
+
+10: tests/test_views.py
+  Symbols:
+    - common_test (function) at line 7
+    - test_basic_view (function) at line 17
+    - test_method_based_view (function) at line 28
+    - test_view_patching (function) at line 41
+    - test_view_inheritance (function) at line 62
+    - test_view_decorators (function) at line 80
+    - test_view_provide_automatic_options_attr (function) at line 101
+    - test_implicit_head (function) at line 141
+    - test_explicit_head (function) at line 155
+    - test_endpoint_override (function) at line 171
+    - test_methods_var_inheritance (function) at line 189
+    - test_multiple_inheritance (function) at line 207
+    - test_remove_method_from_parent (function) at line 226
+    - test_init_once (function) at line 245
+    - Index (class) at line 174
+    - Other (class) at line 49
+    - BetterIndex (class) at line 70
+    - add_x_parachute (function) at line 81
+    - Index1 (class) at line 104
+    - Index2 (class) at line 117
+    - Index3 (class) at line 131
+    - BaseView (class) at line 190
+    - ChildView (class) at line 193
+    - GetView (class) at line 227
+    - DeleteView (class) at line 212
+    - GetDeleteView (class) at line 216
+    - OtherView (class) at line 231
+    - View (class) at line 235
+    - CountInit (class) at line 248
+    - dispatch_request (function) at line 255
+    - get (function) at line 228
+    - post (function) at line 232
+    - delete (function) at line 213
+    - new_function (function) at line 82
+    - head (function) at line 160
+    - propfind (function) at line 197
+    - __init__ (function) at line 251
+
+11: tests/test_json_tag.py
+  Symbols:
+    - test_dump_load_unchanged (function) at line 27
+    - test_duplicate_tag (function) at line 32
+    - test_custom_tag (function) at line 43
+    - test_tag_interface (function) at line 66
+    - test_tag_order (function) at line 73
+    - TagDict (class) at line 33
+    - Foo (class) at line 44
+    - TagFoo (class) at line 48
+    - Tag1 (class) at line 74
+    - Tag2 (class) at line 77
+    - __init__ (function) at line 45
+    - check (function) at line 52
+    - to_json (function) at line 55
+    - to_python (function) at line 58
+
+12: tests/test_subclassing.py
+  Symbols:
+    - test_suppressed_exception_logging (function) at line 6
+    - SuppressedFlask (class) at line 7
+    - index (function) at line 15
+    - log_exception (function) at line 8
+
+13: tests/test_reqctx.py
+  Symbols:
+    - test_teardown_on_pop (function) at line 16
+    - test_teardown_with_previous_exception (function) at line 30
+    - test_teardown_with_handled_exception (function) at line 47
+    - test_proper_test_request_context (function) at line 63
+    - test_context_binding (function) at line 107
+    - test_context_test (function) at line 123
+    - test_manual_context_binding (function) at line 135
+    - TestGreenletContextCopying (class) at line 149
+    - test_session_error_pops_context (function) at line 205
+    - test_session_dynamic_cookie_name (function) at line 229
+    - test_bad_environ_raises_bad_request (function) at line 280
+    - test_environ_for_valid_idna_completes (function) at line 296
+    - test_normal_environ_completes (function) at line 317
+    - end_of_request (function) at line 51
+    - index (function) at line 183
+    - sub (function) at line 71
+    - meh (function) at line 113
+    - test_greenlet_context_copying (function) at line 150
+    - test_greenlet_context_copying_api (function) at line 179
+    - SessionError (class) at line 206
+    - FailingSessionInterface (class) at line 209
+    - CustomFlask (class) at line 239
+    - PathAwareSessionInterface (class) at line 232
+    - set (function) at line 246
+    - get (function) at line 251
+    - set_dynamic_cookie (function) at line 256
+    - get_dynamic_cookie (function) at line 261
+    - open_session (function) at line 210
+    - get_cookie_name (function) at line 233
+    - g (function) at line 187
+
+14: tests/test_blueprints.py
+  Symbols:
+    - test_blueprint_specific_error_handling (function) at line 8
+    - test_blueprint_specific_user_error_handling (function) at line 46
+    - test_blueprint_app_error_handling (function) at line 80
+    - test_blueprint_prefix_slash (function) at line 120
+    - test_blueprint_url_defaults (function) at line 131
+    - test_blueprint_url_processors (function) at line 151
+    - test_templates_and_static (function) at line 176
+    - test_default_static_max_age (function) at line 223
+    - test_templates_list (function) at line 247
+    - test_dotted_name_not_allowed (function) at line 254
+    - test_empty_name_not_allowed (function) at line 259
+    - test_dotted_names_from_app (function) at line 264
+    - test_empty_url_defaults (function) at line 281
+    - test_route_decorator_custom_endpoint (function) at line 295
+    - test_route_decorator_custom_endpoint_with_dots (function) at line 327
+    - test_endpoint_decorator (function) at line 345
+    - test_template_filter (function) at line 362
+    - test_add_template_filter (function) at line 375
+    - test_template_filter_with_name (function) at line 388
+    - test_add_template_filter_with_name (function) at line 401
+    - test_template_filter_with_template (function) at line 414
+    - test_template_filter_after_route_with_template (function) at line 431
+    - test_add_template_filter_with_template (function) at line 447
+    - test_template_filter_with_name_and_template (function) at line 464
+    - test_add_template_filter_with_name_and_template (function) at line 481
+    - test_template_test (function) at line 498
+    - test_add_template_test (function) at line 511
+    - test_template_test_with_name (function) at line 524
+    - test_add_template_test_with_name (function) at line 537
+    - test_template_test_with_template (function) at line 550
+    - test_template_test_after_route_with_template (function) at line 567
+    - test_add_template_test_with_template (function) at line 583
+    - test_template_test_with_name_and_template (function) at line 600
+    - test_add_template_test_with_name_and_template (function) at line 617
+    - test_context_processing (function) at line 634
+    - test_template_global (function) at line 675
+    - test_request_processing (function) at line 696
+    - test_app_request_processing (function) at line 727
+    - test_app_url_processors (function) at line 766
+    - test_nested_blueprint (function) at line 793
+    - test_nested_callback_order (function) at line 842
+    - test_nesting_url_prefixes (function) at line 931
+    - test_nesting_subdomains (function) at line 953
+    - test_child_and_parent_subdomain (function) at line 972
+    - test_unique_blueprint_names (function) at line 994
+    - test_self_registration (function) at line 1011
+    - test_blueprint_renaming (function) at line 1017
+    - frontend_forbidden (function) at line 14
+    - frontend_no (function) at line 18
+    - backend_forbidden (function) at line 22
+    - backend_no (function) at line 26
+    - sideend_no (function) at line 30
+    - app_forbidden (function) at line 88
+    - MyDecoratorException (class) at line 47
+    - MyFunctionException (class) at line 50
+    - my_decorator_exception_handler (function) at line 56
+    - my_function_exception_handler (function) at line 60
+    - blue_deco_test (function) at line 67
+    - blue_func_test (function) at line 71
+    - forbidden_handler (function) at line 84
+    - bp_forbidden (function) at line 94
+    - index (function) at line 1022
+    - foo (function) at line 299
+    - bar (function) at line 139
+    - add_language_code (function) at line 771
+    - pull_lang_code (function) at line 775
+    - about (function) at line 784
+    - MyBlueprint (class) at line 224
+    - app_index (function) at line 268
+    - something (function) at line 286
+    - foo_bar (function) at line 303
+    - foo_bar_foo (function) at line 307
+    - bar_foo (function) at line 311
+    - view (function) at line 336
+    - foobar (function) at line 353
+    - my_reverse (function) at line 484
+    - super_reverse (function) at line 450
+    - is_boolean (function) at line 620
+    - boolean (function) at line 586
+    - template_string (function) at line 637
+    - not_answer_context_processor (function) at line 645
+    - answer_context_processor (function) at line 650
+    - bp_page (function) at line 655
+    - app_page (function) at line 659
+    - get_answer (function) at line 679
+    - before_bp (function) at line 701
+    - after_bp (function) at line 705
+    - teardown_bp (function) at line 711
+    - bp_endpoint (function) at line 749
+    - before_app (function) at line 732
+    - after_app (function) at line 736
+    - teardown_app (function) at line 742
+    - forbidden (function) at line 1030
+    - parent_index (function) at line 803
+    - parent_no (function) at line 807
+    - child_index (function) at line 811
+    - child_no (function) at line 815
+    - grandchild_forbidden (function) at line 819
+    - grandchild_index (function) at line 823
+    - grandchild_no (function) at line 827
+    - app_before1 (function) at line 847
+    - app_teardown1 (function) at line 851
+    - app_before2 (function) at line 855
+    - app_teardown2 (function) at line 859
+    - app_ctx (function) at line 863
+    - parent_before1 (function) at line 867
+    - parent_teardown1 (function) at line 871
+    - parent_before2 (function) at line 875
+    - parent_teardown2 (function) at line 879
+    - parent_ctx (function) at line 883
+    - child_before1 (function) at line 887
+    - child_teardown1 (function) at line 891
+    - child_before2 (function) at line 895
+    - child_teardown2 (function) at line 899
+    - child_ctx (function) at line 903
+    - a (function) at line 907
+    - b (function) at line 911
+    - error (function) at line 1026
+    - index2 (function) at line 1034
+    - get_send_file_max_age (function) at line 225
+
+15: tests/test_config.py
+  Symbols:
+    - common_object_test (function) at line 13
+    - test_config_from_pyfile (function) at line 19
+    - test_config_from_object (function) at line 25
+    - test_config_from_file_json (function) at line 31
+    - test_config_from_file_toml (function) at line 38
+    - test_from_prefixed_env (function) at line 48
+    - test_from_prefixed_env_custom_prefix (function) at line 69
+    - test_from_prefixed_env_nested (function) at line 79
+    - test_config_from_mapping (function) at line 110
+    - test_config_from_class (function) at line 132
+    - test_config_from_envvar (function) at line 144
+    - test_config_from_envvar_missing (function) at line 161
+    - test_config_missing (function) at line 174
+    - test_config_missing_file (function) at line 186
+    - test_custom_config_class (function) at line 198
+    - test_session_lifetime (function) at line 211
+    - test_get_namespace (function) at line 217
+    - test_from_pyfile_weird_encoding (function) at line 244
+    - Base (class) at line 133
+    - Test (class) at line 136
+    - Config (class) at line 199
+    - Flask (class) at line 202
+
+16: tests/test_user_error_handler.py
+  Symbols:
+    - test_error_handler_no_match (function) at line 10
+    - test_error_handler_subclass (function) at line 61
+    - test_error_handler_http_subclass (function) at line 100
+    - test_error_handler_blueprint (function) at line 136
+    - test_default_error_handler (function) at line 163
+    - TestGenericHandlers (class) at line 217
+    - CustomException (class) at line 11
+    - custom_exception_handler (function) at line 15
+    - handle_500 (function) at line 260
+    - custom_test (function) at line 44
+    - key_error (function) at line 48
+    - do_abort (function) at line 234
+    - ParentException (class) at line 62
+    - ChildExceptionUnregistered (class) at line 65
+    - ChildExceptionRegistered (class) at line 68
+    - parent_exception_handler (function) at line 72
+    - child_exception_handler (function) at line 77
+    - parent_test (function) at line 82
+    - unregistered_test (function) at line 126
+    - registered_test (function) at line 122
+    - ForbiddenSubclassRegistered (class) at line 101
+    - ForbiddenSubclassUnregistered (class) at line 104
+    - code_exception_handler (function) at line 108
+    - subclass_exception_handler (function) at line 113
+    - forbidden_test (function) at line 118
+    - bp_exception_handler (function) at line 167
+    - bp_test (function) at line 144
+    - app_exception_handler (function) at line 148
+    - app_test (function) at line 152
+    - bp_forbidden_handler (function) at line 173
+    - bp_registered_test (function) at line 178
+    - bp_forbidden_test (function) at line 182
+    - catchall_exception_handler (function) at line 188
+    - catchall_forbidden_handler (function) at line 194
+    - forbidden (function) at line 199
+    - slash (function) at line 203
+    - Custom (class) at line 220
+    - app (function) at line 224
+    - report_error (function) at line 244
+    - test_handle_class_or_code (function) at line 253
+    - test_handle_generic_http (function) at line 269
+    - test_handle_generic (function) at line 283
+    - do_custom (function) at line 226
+    - do_error (function) at line 230
+    - do_raise (function) at line 238
+    - handle_http (function) at line 275
+    - handle_exception (function) at line 289
+
+17: tests/test_helpers.py
+  Symbols:
+    - FakePath (class) at line 11
+    - PyBytesIO (class) at line 25
+    - TestSendfile (class) at line 33
+    - TestUrlFor (class) at line 102
+    - test_redirect_no_app (function) at line 172
+    - test_redirect_with_app (function) at line 178
+    - test_abort_no_app (function) at line 188
+    - test_app_aborter_class (function) at line 196
+    - test_abort_with_app (function) at line 207
+    - TestNoImports (class) at line 217
+    - TestStreaming (class) at line 236
+    - TestHelpers (class) at line 310
+    - test_open_resource (function) at line 339
+    - test_open_resource_exceptions (function) at line 347
+    - test_open_resource_with_encoding (function) at line 355
+    - __init__ (function) at line 268
+    - __fspath__ (function) at line 21
+    - __getattr__ (function) at line 29
+    - test_send_file (function) at line 34
+    - test_static_file (function) at line 45
+    - test_send_from_directory (function) at line 92
+    - test_url_for_with_anchor (function) at line 103
+    - test_url_for_with_scheme (function) at line 110
+    - test_url_for_with_scheme_not_external (function) at line 120
+    - test_url_for_with_alternating_schemes (function) at line 131
+    - test_url_with_method (function) at line 143
+    - test_url_for_with_self (function) at line 164
+    - redirect (function) at line 179
+    - MyAborter (class) at line 197
+    - MyFlask (class) at line 200
+    - My900Error (class) at line 208
+    - test_name_with_import_error (function) at line 228
+    - test_streaming_with_context (function) at line 237
+    - test_streaming_with_context_as_decorator (function) at line 250
+    - test_streaming_with_context_and_custom_close (function) at line 264
+    - test_stream_keeps_session (function) at line 295
+    - test_get_debug_flag (function) at line 321
+    - test_make_response (function) at line 325
+    - StaticFileApp (class) at line 75
+    - index (function) at line 297
+    - MyView (class) at line 146
+    - Wrapper (class) at line 267
+    - get_send_file_max_age (function) at line 76
+    - get (function) at line 147
+    - post (function) at line 152
+    - generate (function) at line 284
+    - __iter__ (function) at line 271
+    - close (function) at line 274
+    - __next__ (function) at line 277
+    - gen (function) at line 301
+
+18: tests/test_json.py
+  Symbols:
+    - test_bad_request_debug_message (function) at line 15
+    - test_json_bad_requests (function) at line 30
+    - test_json_custom_mimetypes (function) at line 39
+    - test_json_as_unicode (function) at line 51
+    - test_json_dump_to_file (function) at line 57
+    - test_jsonify_basic_types (function) at line 70
+    - test_jsonify_dicts (function) at line 78
+    - test_jsonify_arrays (function) at line 105
+    - test_jsonify_datetime (function) at line 136
+    - FixedOffset (class) at line 145
+    - test_jsonify_aware_datetimes (function) at line 167
+    - test_jsonify_uuid_types (function) at line 176
+    - test_json_decimal (function) at line 191
+    - test_json_attr (function) at line 196
+    - test_tojson_filter (function) at line 210
+    - test_json_customization (function) at line 223
+    - _has_encoding (function) at line 260
+    - test_json_key_sorting (function) at line 270
+    - test_html_method (function) at line 340
+    - post_json (function) at line 20
+    - return_json (function) at line 41
+    - return_kwargs (function) at line 92
+    - return_dict (function) at line 96
+    - return_args_unpack (function) at line 120
+    - return_array (function) at line 124
+    - index (function) at line 276
+    - __init__ (function) at line 225
+    - utcoffset (function) at line 156
+    - tzname (function) at line 159
+    - dst (function) at line 162
+    - add (function) at line 198
+    - X (class) at line 224
+    - default (function) at line 228
+    - CustomProvider (class) at line 234
+    - ObjectWithHTML (class) at line 341
+    - object_hook (function) at line 235
+    - loads (function) at line 241
+    - __html__ (function) at line 342
+
+19: tests/test_cli.py
+  Symbols:
+    - runner (function) at line 37
+    - test_cli_name (function) at line 41
+    - test_find_best_app (function) at line 48
+    - test_prepare_import (function) at line 161
+    - test_locate_app (function) at line 195
+    - test_locate_app_raises (function) at line 217
+    - test_locate_app_suppress_raise (function) at line 222
+    - test_get_version (function) at line 231
+    - test_scriptinfo (function) at line 247
+    - test_app_cli_has_app_context (function) at line 289
+    - test_with_appcontext (function) at line 307
+    - test_appgroup_app_context (function) at line 320
+    - test_flaskgroup_app_context (function) at line 348
+    - test_flaskgroup_debug (function) at line 366
+    - test_flaskgroup_nested (function) at line 385
+    - test_no_command_echo_loading_error (function) at line 398
+    - test_help_echo_loading_error (function) at line 413
+    - test_help_echo_exception (function) at line 428
+    - TestRoutes (class) at line 446
+    - dotenv_not_available (function) at line 521
+    - test_load_dotenv (function) at line 536
+    - test_dotenv_path (function) at line 560
+    - test_dotenv_optional (function) at line 569
+    - test_disable_dotenv_from_env (function) at line 577
+    - test_run_cert_path (function) at line 584
+    - test_run_cert_adhoc (function) at line 602
+    - test_run_cert_import (function) at line 619
+    - test_run_cert_no_ssl (function) at line 641
+    - test_cli_blueprints (function) at line 648
+    - test_cli_empty (function) at line 691
+    - test_run_exclude_patterns (function) at line 700
+    - Module (class) at line 127
+    - reset_path (function) at line 171
+    - MockCtx (class) at line 232
+    - create_app (function) at line 129
+    - _param_cb (function) at line 290
+    - check (function) at line 296
+    - testcmd (function) at line 310
+    - cli (function) at line 373
+    - test (function) at line 377
+    - subgroup (function) at line 330
+    - test2 (function) at line 334
+    - show (function) at line 391
+    - app (function) at line 448
+    - invoke (function) at line 459
+    - expect_order (function) at line 463
+    - test_simple (function) at line 469
+    - test_sort (function) at line 474
+    - test_all_methods (function) at line 489
+    - test_no_routes (function) at line 495
+    - test_subdomain (function) at line 502
+    - test_host (function) at line 511
+    - custom_command (function) at line 656
+    - nested_command (function) at line 660
+    - merged_command (function) at line 664
+    - late_command (function) at line 668
+    - make_app (function) at line 84
+    - exit (function) at line 236
+
+20: tests/test_templating.py
+  Symbols:
+    - test_context_processing (function) at line 11
+    - test_original_win (function) at line 24
+    - test_simple_stream (function) at line 33
+    - test_request_less_rendering (function) at line 42
+    - test_standard_context (function) at line 53
+    - test_escaping (function) at line 71
+    - test_no_escaping (function) at line 91
+    - test_escaping_without_template_filename (function) at line 113
+    - test_macros (function) at line 118
+    - test_template_filter (function) at line 123
+    - test_add_template_filter (function) at line 133
+    - test_template_filter_with_name (function) at line 143
+    - test_add_template_filter_with_name (function) at line 153
+    - test_template_filter_with_template (function) at line 163
+    - test_add_template_filter_with_template (function) at line 176
+    - test_template_filter_with_name_and_template (function) at line 190
+    - test_add_template_filter_with_name_and_template (function) at line 203
+    - test_template_test (function) at line 217
+    - test_add_template_test (function) at line 227
+    - test_template_test_with_name (function) at line 237
+    - test_add_template_test_with_name (function) at line 247
+    - test_template_test_with_template (function) at line 257
+    - test_add_template_test_with_template (function) at line 270
+    - test_template_test_with_name_and_template (function) at line 284
+    - test_add_template_test_with_name_and_template (function) at line 297
+    - test_add_template_global (function) at line 311
+    - test_custom_template_loader (function) at line 324
+    - test_iterable_loader (function) at line 342
+    - test_templates_auto_reload (function) at line 362
+    - test_templates_auto_reload_debug_run (function) at line 394
+    - test_template_loader_debugging (function) at line 407
+    - test_custom_jinja_env (function) at line 443
+    - context_processor (function) at line 344
+    - index (function) at line 348
+    - my_reverse (function) at line 204
+    - super_reverse (function) at line 177
+    - boolean (function) at line 271
+    - is_boolean (function) at line 298
+    - get_stuff (function) at line 313
+    - MyFlask (class) at line 325
+    - run_simple_mock (function) at line 395
+    - _TestHandler (class) at line 412
+    - CustomEnvironment (class) at line 444
+    - CustomFlask (class) at line 447
+    - create_global_jinja_loader (function) at line 326
+    - handle (function) at line 413
+
+21: tests/test_appctx.py
+  Symbols:
+    - test_basic_url_generation (function) at line 8
+    - test_url_generation_requires_server_name (function) at line 21
+    - test_url_generation_without_context_fails (function) at line 27
+    - test_request_context_means_app_context (function) at line 32
+    - test_app_context_provides_current_app (function) at line 38
+    - test_app_tearing_down (function) at line 44
+    - test_app_tearing_down_with_previous_exception (function) at line 57
+    - test_app_tearing_down_with_handled_exception_by_except_block (function) at line 75
+    - test_app_tearing_down_with_handled_exception_by_app_handler (function) at line 91
+    - test_app_tearing_down_with_unhandled_exception (function) at line 113
+    - test_app_ctx_globals_methods (function) at line 134
+    - test_custom_app_ctx_globals_class (function) at line 157
+    - test_context_refcounts (function) at line 167
+    - test_clean_pop (function) at line 193
+    - index (function) at line 179
+    - cleanup (function) at line 118
+    - handler (function) at line 104
+    - CustomRequestGlobals (class) at line 158
+    - teardown_req (function) at line 198
+    - teardown_app (function) at line 202
+    - __init__ (function) at line 159
+
+22: tests/test_regression.py
+  Symbols:
+    - test_aborting (function) at line 4
+    - Foo (class) at line 5
+    - handle_foo (function) at line 9
+    - index (function) at line 13
+    - test (function) at line 17
+
+23: tests/test_testing.py
+  Symbols:
+    - test_environ_defaults_from_config (function) at line 15
+    - test_environ_defaults (function) at line 30
+    - test_environ_base_default (function) at line 42
+    - test_environ_base_modified (function) at line 57
+    - test_client_open_environ (function) at line 73
+    - test_specify_url_scheme (function) at line 90
+    - test_path_is_url (function) at line 102
+    - test_environbuilder_json_dumps (function) at line 110
+    - test_blueprint_with_subdomain (function) at line 117
+    - test_redirect_keep_session (function) at line 141
+    - test_session_transactions (function) at line 169
+    - test_session_transactions_no_null_sessions (function) at line 186
+    - test_session_transactions_keep_context (function) at line 196
+    - test_session_transaction_needs_cookies (function) at line 204
+    - test_test_client_context_binding (function) at line 212
+    - test_reuse_client (function) at line 241
+    - test_full_url_request (function) at line 251
+    - test_json_request_and_response (function) at line 263
+    - test_client_json_no_app_context (function) at line 282
+    - test_subdomain (function) at line 302
+    - test_nosubdomain (function) at line 321
+    - test_cli_runner_class (function) at line 338
+    - test_cli_invoke (function) at line 350
+    - test_cli_custom_obj (function) at line 364
+    - test_client_pop_all_preserved (function) at line 382
+    - index (function) at line 384
+    - get_session (function) at line 150
+    - other (function) at line 221
+    - action (function) at line 253
+    - echo (function) at line 265
+    - hello (function) at line 284
+    - Namespace (class) at line 287
+    - view (function) at line 325
+    - SubRunner (class) at line 342
+    - hello_command (function) at line 373
+    - NS (class) at line 365
+    - create_app (function) at line 368
+    - add (function) at line 290
+
+24: tests/test_apps/blueprintapp/__init__.py
+  Symbols:
+
+25: tests/test_apps/blueprintapp/apps/__init__.py
+  Symbols:
+
+26: tests/test_apps/blueprintapp/apps/frontend/__init__.py
+  Symbols:
+    - index (function) at line 8
+    - missing_template (function) at line 13
+
+27: tests/test_apps/blueprintapp/apps/admin/__init__.py
+  Symbols:
+    - index (function) at line 14
+    - index2 (function) at line 19
+
+28: tests/test_apps/helloworld/hello.py
+  Symbols:
+    - hello (function) at line 7
+
+29: tests/test_apps/helloworld/wsgi.py
+  Symbols:
+
+30: tests/test_apps/subdomaintestmodule/__init__.py
+  Symbols:
+
+31: tests/test_apps/cliapp/importerrorapp.py
+  Symbols:
+
+32: tests/test_apps/cliapp/__init__.py
+  Symbols:
+
+33: tests/test_apps/cliapp/factory.py
+  Symbols:
+    - create_app (function) at line 4
+    - create_app2 (function) at line 8
+    - no_app (function) at line 12
+
+34: tests/test_apps/cliapp/multiapp.py
+  Symbols:
+
+35: tests/test_apps/cliapp/app.py
+  Symbols:
+
+36: tests/test_apps/cliapp/inner1/__init__.py
+  Symbols:
+
+37: tests/test_apps/cliapp/inner1/inner2/flask.py
+  Symbols:
+
+38: tests/test_apps/cliapp/inner1/inner2/__init__.py
+  Symbols:
+
+39: tests/type_check/typing_route.py
+  Symbols:
+    - hello_str (function) at line 17
+    - hello_bytes (function) at line 22
+    - hello_json (function) at line 27
+    - hello_json_dict (function) at line 32
+    - hello_json_list (function) at line 37
+    - StatusJSON (class) at line 41
+    - typed_dict (function) at line 46
+    - hello_generator (function) at line 51
+    - hello_generator_expression (function) at line 60
+    - hello_iterator (function) at line 65
+    - tuple_status (function) at line 71
+    - tuple_status_enum (function) at line 76
+    - tuple_headers (function) at line 81
+    - return_template (function) at line 87
+    - return_template_stream (function) at line 92
+    - RenderTemplateView (class) at line 101
+    - show (function) at line 52
+    - __init__ (function) at line 102
+    - dispatch_request (function) at line 105
+
+40: tests/type_check/typing_app_decorators.py
+  Symbols:
+    - after_sync (function) at line 10
+    - before_sync (function) at line 20
+    - teardown_sync (function) at line 28
+
+41: tests/type_check/typing_error_handler.py
+  Symbols:
+    - handle_400 (function) at line 16
+    - handle_custom (function) at line 21
+    - handle_accept_base (function) at line 26
+    - handle_multiple (function) at line 32
+
+42: docs/conf.py
+  Symbols:
+    - github_link (function) at line 71
+    - setup (function) at line 99
+
+43: examples/tutorial/tests/conftest.py
+  Symbols:
+    - app (function) at line 16
+    - client (function) at line 36
+    - runner (function) at line 42
+    - AuthActions (class) at line 47
+    - auth (function) at line 61
+    - __init__ (function) at line 48
+    - login (function) at line 51
+    - logout (function) at line 56
+
+44: examples/tutorial/tests/test_auth.py
+  Symbols:
+    - test_register (function) at line 8
+    - test_register_validate_input (function) at line 32
+    - test_login (function) at line 39
+    - test_login_validate_input (function) at line 59
+    - test_logout (function) at line 64
+
+45: examples/tutorial/tests/test_db.py
+  Symbols:
+    - test_get_close_db (function) at line 8
+    - test_init_db_command (function) at line 19
+    - Recorder (class) at line 20
+    - fake_init_db (function) at line 23
+
+46: examples/tutorial/tests/test_factory.py
+  Symbols:
+    - test_config (function) at line 4
+    - test_hello (function) at line 10
+
+47: examples/tutorial/tests/test_blog.py
+  Symbols:
+    - test_index (function) at line 6
+    - test_login_required (function) at line 20
+    - test_author_required (function) at line 25
+    - test_exists_required (function) at line 41
+    - test_create (function) at line 46
+    - test_update (function) at line 57
+    - test_create_update_validate (function) at line 69
+    - test_delete (function) at line 75
+
+48: examples/tutorial/flaskr/auth.py
+  Symbols:
+    - login_required (function) at line 19
+    - load_logged_in_user (function) at line 33
+    - register (function) at line 47
+    - login (function) at line 85
+    - logout (function) at line 113
+    - wrapped_view (function) at line 23
+
+49: examples/tutorial/flaskr/db.py
+  Symbols:
+    - get_db (function) at line 9
+    - close_db (function) at line 23
+    - init_db (function) at line 33
+    - init_db_command (function) at line 42
+    - init_app (function) at line 51
+
+50: examples/tutorial/flaskr/__init__.py
+  Symbols:
+    - create_app (function) at line 6
+    - hello (function) at line 30
+
+51: examples/tutorial/flaskr/blog.py
+  Symbols:
+    - index (function) at line 17
+    - get_post (function) at line 28
+    - create (function) at line 62
+    - update (function) at line 88
+    - delete (function) at line 115
+
+52: examples/celery/make_celery.py
+  Symbols:
+
+53: examples/celery/src/task_app/tasks.py
+  Symbols:
+    - add (function) at line 8
+    - block (function) at line 13
+    - process (function) at line 18
+
+54: examples/celery/src/task_app/__init__.py
+  Symbols:
+    - create_app (function) at line 7
+    - celery_init_app (function) at line 29
+    - index (function) at line 20
+    - FlaskTask (class) at line 30
+    - __call__ (function) at line 31
+
+55: examples/celery/src/task_app/views.py
+  Symbols:
+    - result (function) at line 11
+    - add (function) at line 22
+    - block (function) at line 30
+    - process (function) at line 36
+
+56: examples/javascript/js_example/__init__.py
+  Symbols:
+
+57: examples/javascript/js_example/views.py
+  Symbols:
+    - index (function) at line 10
+    - add (function) at line 15
+
+58: examples/javascript/tests/test_js_example.py
+  Symbols:
+    - test_index (function) at line 14
+    - test_add (function) at line 25
+    - check (function) at line 15
+
+59: examples/javascript/tests/conftest.py
+  Symbols:
+    - fixture_app (function) at line 7
+    - client (function) at line 14
+
+60: src/flask/logging.py
+  Symbols:
+    - wsgi_errors_stream (function) at line 16
+    - has_level_handler (function) at line 31
+    - create_logger (function) at line 58
+
+61: src/flask/signals.py
+  Symbols:
+
+62: src/flask/sessions.py
+  Symbols:
+    - SessionMixin (class) at line 24
+    - SecureCookieSession (class) at line 52
+    - NullSession (class) at line 97
+    - SessionInterface (class) at line 114
+    - _lazy_sha1 (function) at line 290
+    - SecureCookieSessionInterface (class) at line 298
+    - permanent (function) at line 33
+    - __init__ (function) at line 74
+    - __getitem__ (function) at line 84
+    - get (function) at line 88
+    - setdefault (function) at line 92
+    - _fail (function) at line 103
+    - make_null_session (function) at line 164
+    - is_null_session (function) at line 176
+    - get_cookie_name (function) at line 185
+    - get_cookie_domain (function) at line 189
+    - get_cookie_path (function) at line 201
+    - get_cookie_httponly (function) at line 209
+    - get_cookie_secure (function) at line 216
+    - get_cookie_samesite (function) at line 222
+    - get_cookie_partitioned (function) at line 229
+    - get_expiration_time (function) at line 237
+    - should_set_cookie (function) at line 247
+    - open_session (function) at line 336
+    - save_session (function) at line 350
+    - get_signing_serializer (function) at line 317
+    - on_update (function) at line 78
+
+63: src/flask/config.py
+  Symbols:
+    - ConfigAttribute (class) at line 20
+    - Config (class) at line 50
+    - __init__ (function) at line 94
+    - __get__ (function) at line 35
+    - __set__ (function) at line 46
+    - from_envvar (function) at line 102
+    - from_prefixed_env (function) at line 126
+    - from_pyfile (function) at line 187
+    - from_object (function) at line 218
+    - from_file (function) at line 256
+    - from_mapping (function) at line 304
+    - get_namespace (function) at line 323
+    - __repr__ (function) at line 366
+
+64: src/flask/templating.py
+  Symbols:
+    - _default_template_ctx_processor (function) at line 24
+    - Environment (class) at line 39
+    - DispatchingJinjaLoader (class) at line 52
+    - _render (function) at line 126
+    - render_template (function) at line 138
+    - render_template_string (function) at line 153
+    - _stream (function) at line 165
+    - stream_template (function) at line 188
+    - stream_template_string (function) at line 207
+    - __init__ (function) at line 57
+    - get_source (function) at line 60
+    - _get_source_explained (function) at line 67
+    - _get_source_fast (function) at line 91
+    - _iter_loaders (function) at line 101
+    - list_templates (function) at line 111
+    - generate (function) at line 173
+
+65: src/flask/globals.py
+  Symbols:
+
+66: src/flask/__init__.py
+  Symbols:
+
+67: src/flask/blueprints.py
+  Symbols:
+    - Blueprint (class) at line 18
+    - __init__ (function) at line 19
+    - get_send_file_max_age (function) at line 55
+    - send_static_file (function) at line 82
+    - open_resource (function) at line 104
+
+68: src/flask/cli.py
+  Symbols:
+    - NoAppException (class) at line 37
+    - find_best_app (function) at line 41
+    - _called_with_wrong_args (function) at line 94
+    - find_app_by_string (function) at line 120
+    - prepare_import (function) at line 200
+    - locate_app (function) at line 241
+    - get_version (function) at line 267
+    - ScriptInfo (class) at line 293
+    - with_appcontext (function) at line 380
+    - AppGroup (class) at line 405
+    - _set_app (function) at line 440
+    - _set_debug (function) at line 468
+    - _env_file_callback (function) at line 493
+    - FlaskGroup (class) at line 531
+    - _path_is_ancestor (function) at line 697
+    - load_dotenv (function) at line 704
+    - show_server_banner (function) at line 772
+    - CertParamType (class) at line 786
+    - _validate_key (function) at line 834
+    - SeparatedPathType (class) at line 873
+    - run_command (function) at line 941
+    - shell_command (function) at line 1007
+    - routes_command (function) at line 1067
+    - main (function) at line 1128
+    - __init__ (function) at line 794
+    - load_app (function) at line 333
+    - decorator (function) at line 422
+    - command (function) at line 413
+    - group (function) at line 429
+    - _load_plugin_commands (function) at line 600
+    - get_command (function) at line 617
+    - list_commands (function) at line 644
+    - make_context (function) at line 665
+    - parse_args (function) at line 686
+    - convert (function) at line 879
+    - app (function) at line 969
+
+69: src/flask/wrappers.py
+  Symbols:
+    - Request (class) at line 18
+    - Response (class) at line 222
+    - max_content_length (function) at line 89
+    - max_form_memory_size (function) at line 116
+    - max_form_parts (function) at line 143
+    - endpoint (function) at line 147
+    - blueprint (function) at line 162
+    - blueprints (function) at line 181
+    - _load_form_data (function) at line 197
+    - on_json_loading_failed (function) at line 212
+    - max_cookie_size (function) at line 247
+
+70: src/flask/app.py
+  Symbols:
+    - _make_timedelta (function) at line 74
+    - Flask (class) at line 81
+    - __init__ (function) at line 226
+    - get_send_file_max_age (function) at line 281
+    - send_static_file (function) at line 308
+    - open_resource (function) at line 330
+    - open_instance_resource (function) at line 363
+    - create_jinja_environment (function) at line 385
+    - create_url_adapter (function) at line 425
+    - raise_routing_exception (function) at line 478
+    - update_template_context (function) at line 506
+    - make_shell_context (function) at line 534
+    - run (function) at line 546
+    - test_client (function) at line 669
+    - test_cli_runner (function) at line 727
+    - handle_http_exception (function) at line 744
+    - handle_user_exception (function) at line 779
+    - handle_exception (function) at line 811
+    - log_exception (function) at line 864
+    - dispatch_request (function) at line 879
+    - full_dispatch_request (function) at line 904
+    - finalize_request (function) at line 922
+    - make_default_options_response (function) at line 953
+    - ensure_sync (function) at line 966
+    - async_to_sync (function) at line 980
+    - url_for (function) at line 1003
+    - make_response (function) at line 1129
+    - preprocess_request (function) at line 1271
+    - process_response (function) at line 1298
+    - do_teardown_request (function) at line 1326
+    - do_teardown_appcontext (function) at line 1360
+    - app_context (function) at line 1386
+    - request_context (function) at line 1407
+    - test_request_context (function) at line 1423
+    - wsgi_app (function) at line 1479
+    - __call__ (function) at line 1529
+
+71: src/flask/debughelpers.py
+  Symbols:
+    - UnexpectedUnicodeError (class) at line 17
+    - DebugFilesKeyError (class) at line 23
+    - FormDataRoutingRedirect (class) at line 50
+    - attach_enctype_error_multidict (function) at line 81
+    - _dump_loader_info (function) at line 107
+    - explain_template_loading_attempts (function) at line 124
+    - __init__ (function) at line 57
+    - __str__ (function) at line 46
+    - newcls (class) at line 90
+    - __getitem__ (function) at line 91
+
+72: src/flask/ctx.py
+  Symbols:
+    - _AppCtxGlobals (class) at line 29
+    - after_this_request (function) at line 117
+    - copy_current_request_context (function) at line 155
+    - has_request_context (function) at line 196
+    - has_app_context (function) at line 228
+    - AppContext (class) at line 238
+    - RequestContext (class) at line 287
+    - __getattr__ (function) at line 52
+    - __setattr__ (function) at line 58
+    - __delattr__ (function) at line 61
+    - get (function) at line 67
+    - pop (function) at line 396
+    - setdefault (function) at line 92
+    - __contains__ (function) at line 104
+    - __iter__ (function) at line 107
+    - __repr__ (function) at line 445
+    - wrapper (function) at line 189
+    - __init__ (function) at line 309
+    - push (function) at line 367
+    - __enter__ (function) at line 433
+    - __exit__ (function) at line 437
+    - copy (function) at line 337
+    - match_request (function) at line 357
+
+73: src/flask/typing.py
+  Symbols:
+
+74: src/flask/testing.py
+  Symbols:
+    - EnvironBuilder (class) at line 27
+    - _get_werkzeug_version (function) at line 100
+    - FlaskClient (class) at line 109
+    - FlaskCliRunner (class) at line 265
+    - __init__ (function) at line 271
+    - json_dumps (function) at line 88
+    - session_transaction (function) at line 136
+    - _copy_environ (function) at line 185
+    - _request_from_builder_args (function) at line 193
+    - open (function) at line 204
+    - __enter__ (function) at line 249
+    - __exit__ (function) at line 255
+    - invoke (function) at line 275
+
+75: src/flask/helpers.py
+  Symbols:
+    - get_debug_flag (function) at line 27
+    - get_load_dotenv (function) at line 35
+    - stream_with_context (function) at line 62
+    - make_response (function) at line 139
+    - url_for (function) at line 188
+    - redirect (function) at line 242
+    - abort (function) at line 266
+    - get_template_attribute (function) at line 289
+    - flash (function) at line 311
+    - get_flashed_messages (function) at line 345
+    - _prepare_send_file_kwargs (function) at line 387
+    - send_file (function) at line 400
+    - send_from_directory (function) at line 526
+    - get_root_path (function) at line 570
+    - _split_blueprint_path (function) at line 628
+    - generator (function) at line 108
+    - decorator (function) at line 102
+
+76: src/flask/__main__.py
+  Symbols:
+
+77: src/flask/views.py
+  Symbols:
+    - View (class) at line 16
+    - MethodView (class) at line 138
+    - dispatch_request (function) at line 182
+    - as_view (function) at line 86
+    - __init_subclass__ (function) at line 165
+    - view (function) at line 115
+
+78: src/flask/sansio/blueprints.py
+  Symbols:
+    - BlueprintSetupState (class) at line 34
+    - Blueprint (class) at line 119
+    - __init__ (function) at line 174
+    - add_url_rule (function) at line 413
+    - _check_setup_finished (function) at line 213
+    - record (function) at line 224
+    - record_once (function) at line 233
+    - make_setup_state (function) at line 246
+    - register_blueprint (function) at line 256
+    - register (function) at line 273
+    - _merge_blueprint_funcs (function) at line 379
+    - app_template_filter (function) at line 444
+    - add_app_template_filter (function) at line 461
+    - app_template_test (function) at line 478
+    - add_app_template_test (function) at line 497
+    - app_template_global (function) at line 516
+    - add_app_template_global (function) at line 535
+    - before_app_request (function) at line 554
+    - after_app_request (function) at line 564
+    - teardown_app_request (function) at line 574
+    - app_context_processor (function) at line 584
+    - app_errorhandler (function) at line 596
+    - app_url_value_preprocessor (function) at line 613
+    - app_url_defaults (function) at line 625
+    - wrapper (function) at line 240
+    - extend (function) at line 380
+    - decorator (function) at line 603
+    - register_template (function) at line 548
+    - from_blueprint (function) at line 604
+
+79: src/flask/sansio/app.py
+  Symbols:
+    - _make_timedelta (function) at line 52
+    - App (class) at line 59
+    - __init__ (function) at line 282
+    - _check_setup_finished (function) at line 413
+    - name (function) at line 426
+    - logger (function) at line 443
+    - jinja_env (function) at line 470
+    - create_jinja_environment (function) at line 479
+    - make_config (function) at line 482
+    - make_aborter (function) at line 498
+    - auto_find_instance_path (function) at line 510
+    - create_global_jinja_loader (function) at line 523
+    - select_jinja_autoescape (function) at line 536
+    - debug (function) at line 563
+    - register_blueprint (function) at line 570
+    - iter_blueprints (function) at line 597
+    - add_url_rule (function) at line 605
+    - template_filter (function) at line 664
+    - add_template_filter (function) at line 686
+    - template_test (function) at line 698
+    - add_template_test (function) at line 727
+    - template_global (function) at line 741
+    - add_template_global (function) at line 765
+    - teardown_appcontext (function) at line 779
+    - shell_context_processor (function) at line 813
+    - _find_error_handler (function) at line 823
+    - trap_http_exception (function) at line 848
+    - should_ignore_error (function) at line 883
+    - redirect (function) at line 893
+    - inject_url_defaults (function) at line 911
+    - handle_url_build_error (function) at line 932
+    - decorator (function) at line 758
+
+80: src/flask/sansio/scaffold.py
+  Symbols:
+    - setupmethod (function) at line 42
+    - Scaffold (class) at line 52
+    - _endpoint_from_view_func (function) at line 701
+    - _find_package_path (function) at line 709
+    - find_package (function) at line 754
+    - wrapper_func (function) at line 45
+    - __init__ (function) at line 75
+    - __repr__ (function) at line 217
+    - _check_setup_finished (function) at line 220
+    - static_folder (function) at line 234
+    - has_static_folder (function) at line 241
+    - static_url_path (function) at line 265
+    - jinja_loader (function) at line 272
+    - _method_route (function) at line 284
+    - get (function) at line 296
+    - post (function) at line 304
+    - put (function) at line 312
+    - delete (function) at line 320
+    - patch (function) at line 328
+    - route (function) at line 336
+    - add_url_rule (function) at line 368
+    - endpoint (function) at line 436
+    - before_request (function) at line 460
+    - after_request (function) at line 487
+    - teardown_request (function) at line 508
+    - context_processor (function) at line 542
+    - url_value_preprocessor (function) at line 559
+    - url_defaults (function) at line 584
+    - errorhandler (function) at line 598
+    - register_error_handler (function) at line 642
+    - _get_exc_class_and_code (function) at line 657
+    - decorator (function) at line 635
+
+81: src/flask/json/provider.py
+  Symbols:
+    - JSONProvider (class) at line 19
+    - _default (function) at line 108
+    - DefaultJSONProvider (class) at line 124
+    - __init__ (function) at line 38
+    - dumps (function) at line 166
+    - dump (function) at line 49
+    - loads (function) at line 181
+    - load (function) at line 67
+    - _prepare_response_obj (function) at line 75
+    - response (function) at line 189
+
+82: src/flask/json/__init__.py
+  Symbols:
+    - dumps (function) at line 13
+    - dump (function) at line 47
+    - loads (function) at line 77
+    - load (function) at line 108
+    - jsonify (function) at line 138
+
+83: src/flask/json/tag.py
+  Symbols:
+    - JSONTag (class) at line 60
+    - TagDict (class) at line 93
+    - PassDict (class) at line 119
+    - TagTuple (class) at line 133
+    - PassList (class) at line 147
+    - TagBytes (class) at line 159
+    - TagMarkup (class) at line 173
+    - TagUUID (class) at line 191
+    - TagDateTime (class) at line 205
+    - TaggedJSONSerializer (class) at line 219
+    - __init__ (function) at line 249
+    - check (function) at line 209
+    - to_json (function) at line 212
+    - to_python (function) at line 215
+    - tag (function) at line 289
+    - register (function) at line 256
+    - untag (function) at line 297
+    - _untag_scan (function) at line 309
+    - dumps (function) at line 321
+    - loads (function) at line 325
+
