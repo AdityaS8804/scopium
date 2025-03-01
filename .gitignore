@@ -1,1 +1,4 @@
 flask
+*.json
+*.html
+*.txt
