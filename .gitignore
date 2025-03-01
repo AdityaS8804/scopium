@@ -1,4 +1,3 @@
 flask
 *.json
 *.html
-*.txt
