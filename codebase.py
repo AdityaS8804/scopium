@@ -136,7 +136,7 @@ class CodebaseVisualizer:
                 if self.graph.nodes[node]['type'] == 'file'}
     
 # Initialize and use the visualizer
-visualizer = CodebaseVisualizer("/Users/Viku/GitHub/CO2-Emissions-Federated-Model/AI-Federated-Learning")
+visualizer = CodebaseVisualizer("../flask")
 visualizer.parse_files()
 visualizer.build_graph()
 visualizer.visualize()
