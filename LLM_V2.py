@@ -2191,5 +2191,5 @@ if __name__ == "__main__":
     )
 
     # Chat with your codebase
-    response = query_system.chat_with_codebase("what does this test_templates_list function do in my codebase?")
+    response = query_system.chat_with_codebase("what does this flask directory do in my codebase?")
     print(response)
