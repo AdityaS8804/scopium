@@ -2,3 +2,4 @@ flask
 *.json
 *.html
 MySpace/
+project/

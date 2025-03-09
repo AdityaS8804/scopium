@@ -135,7 +135,8 @@ const ChatApp: React.FC = () => {
     }
   };
 
-  // When a repository is clicked, set it as the current chat session.
+  // When a repository is clicked, set it as the current chat session
+  // and make a dummy API call sending the repository link.
   const handleRepoSelect = (repo: Repository) => {
     setCurrentRepo(repo);
     setChats((prev) => {
@@ -144,6 +145,20 @@ const ChatApp: React.FC = () => {
       }
       return prev;
     });
+
+    // Dummy API call to send the repository link
+    fetch('http://127.0.0.1:5000/api/dummy', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ repository_link: repo.clone_url })
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log('Dummy API response:', data);
+      })
+      .catch((error) => {
+        console.error('Dummy API error:', error);
+      });
   };
 
   return (
