@@ -3,13 +3,20 @@ import time
 from jwt import JWT, jwk_from_pem
 import requests
 from flask_cors import CORS
-
+from dotenv import load_dotenv
+import os
 app = Flask(__name__)
 CORS(app)
+# Load the .env file
+load_dotenv()
 
+HOSTS = os.getenv('HOSTS')
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.getenv('PASSWORD')
 # Configuration variables
-PRIVATE_PEM_PATH = '/Users/vedanshkumar/Documents/Fun_ml/Projects/GraphRAG/scopium/scopiumapp.2025-03-08.private-key.pem'
+PRIVATE_PEM_PATH = 'D:\AdityasFiles\scopium\Server\scopiumapp.2025-03-08.private-key.pem'
 CLIENT_ID = 'Iv23liiin5e6YF9k8FGG'
+
 
 @app.route('/api/github/repos', methods=['POST'])
 def github_repos():
@@ -53,6 +60,7 @@ def github_repos():
             'response': response.json()
         }), response.status_code
 
+
 @app.route('/api/github/search', methods=['POST'])
 def github_search():
     data = request.get_json()
@@ -76,12 +84,36 @@ def github_search():
         }), response.status_code
 
 # New dummy endpoint that receives a repository link
+
+
 @app.route('/api/dummy', methods=['POST'])
 def dummy_endpoint():
     data = request.get_json()
     repo_link = data.get('repository_link')
     # Dummy processing can be done here
+
     return jsonify({"message": f"Dummy endpoint received repository link: {repo_link}"}), 200
+
+
+def initialize_auth():
+    # Set database variables globally
+    pass
+
+
+def make_graph(repo_link):
+    # git clone the link
+    pass
+
+
+def check_graph(repo_link):
+    # Check if the graph is already there
+    pass
+
+
+def chat(query: str, graph_name: str):
+
+    pass
+
 
 if __name__ == '__main__':
     app.run(debug=True)
