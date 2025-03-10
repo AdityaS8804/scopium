@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to **Project Name** – a cutting-edge multi-chat application integrated with GitHub repository search functionality. This project leverages a modern **React** frontend styled with **Tailwind CSS** and enhanced by **shadcn UI** components, alongside a robust **Flask** backend. Users can search for any public repository, connect to it, and initiate dedicated chat sessions tailored for each repository. All chat sessions and histories are cached locally, ensuring your conversations persist even after a reload.
+Welcome to **Scopiume** – a cutting-edge multi-chat application integrated with GitHub repository search functionality. This project leverages a modern **React** frontend styled with **Tailwind CSS** and enhanced by **shadcn UI** components, alongside a robust **Flask** backend. Users can search for any public repository, connect to it, and initiate dedicated chat sessions tailored for each repository. All chat sessions and histories are cached locally, ensuring your conversations persist even after a reload.
 
 > *More detailed introduction coming soon...*
 
