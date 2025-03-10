@@ -4,3 +4,4 @@ flask
 tree-sitter-languages
 keploy
 Catch2
+.env
