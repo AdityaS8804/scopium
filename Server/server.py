@@ -1,8 +1,12 @@
+import jwt
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import serialization
 import subprocess
 import sys
 from flask import Flask, request, jsonify
 import time
 from jwt import *
+
 import requests
 from flask_cors import CORS
 from dotenv import load_dotenv
@@ -42,16 +46,18 @@ def github_repos():
     except Exception as e:
         return jsonify({'error': 'Invalid GitHub link', 'details': str(e)}), 400
 
+    # ...existing code...
     try:
         with open(PRIVATE_PEM_PATH, 'rb') as pem_file:
             pem_data = pem_file.read()
-        key = jwk_from_pem(pem_data)
+        key = serialization.load_pem_private_key(
+            pem_data, password=None, backend=default_backend())
         payload = {
             'iat': int(time.time()),
             'exp': int(time.time()) + 600,
             'iss': CLIENT_ID
         }
-        jwt_instance = JWT()
+        jwt_instance = jwt.JWT()
         jwt_token = jwt_instance.encode(payload, key, alg='RS256')
     except Exception as e:
         app.logger.error("JWT generation error: %s", e)
@@ -106,8 +112,10 @@ def dummy_endpoint():
     # Dummy processing can be done here
     repo_name = find_graph_name(repo_link)
     graph_name = '_'.join(repo_name.split('/'))
+    graph_name = graph_name[:graph_name.find('.')]
+    print("GRAPH NAME::::", graph_name)
     if not check_graph(graph_name):
-        make_graph(repo_link, repo_name)
+        make_graph(repo_link, repo_name, graph_name)
     # Initialize client
     query_system = EnhancedCodebaseQuery(
         db_name="_system",
@@ -123,12 +131,7 @@ def dummy_endpoint():
     return jsonify({"message": f"{response}"}), 200
 
 
-def initialize_auth():
-    # Set database variables globally
-    pass
-
-
-def make_graph(repo_link, repo_name):
+def make_graph(repo_link, repo_name, graph_name):
 
     # git clone the link
     original_dir = os.getcwd()
@@ -162,7 +165,7 @@ def make_graph(repo_link, repo_name):
         print(f"Graph has {len(G.nodes())} nodes and {len(G.edges())} edges")
 
         G_adb = nxadb.Graph(
-            name='_'.join(repo_name.split('/')),
+            name=graph_name,
             db=db,
             incoming_graph_data=G,
             write_batch_size=50000,  # feel free to modify
@@ -193,11 +196,6 @@ def check_graph(match):
     graph_names = [graph['name'] for graph in db.graphs()]
     print(match)
     return match in graph_names
-
-
-def chat(query: str, graph_name: str):
-
-    pass
 
 
 if __name__ == '__main__':

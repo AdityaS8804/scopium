@@ -476,16 +476,42 @@ class CodebaseVisualizer:
         for symbols_dict in self.module_symbols.values():
             all_symbols.update(symbols_dict.keys())
 
+         # Skip if no symbols to check or file is empty
+        if not all_symbols or not content:
+            return
+
+        # Pre-compile all regex patterns for symbols with meaningful length
+        symbol_patterns = {}
+        for symbol_name in all_symbols:
+            # Skip very short symbols that would cause many false positives
+            if len(symbol_name) > 2:
+                symbol_patterns[symbol_name] = re.compile(
+                    r'\b' + re.escape(symbol_name) + r'\b')
+
         # Process content line by line
         lines = content.splitlines()
 
+        # Skip definition lines for this file
+        definition_lines = {}
+        if file_path in self.module_symbols:
+            for symbol, details in self.module_symbols[file_path].items():
+                definition_lines[details['line_no']] = symbol
+
         for line_no, line in enumerate(lines, 1):
-            # Look for references to any known symbol
-            for symbol_name in all_symbols:
-                # Simple pattern matching (would be more robust with proper C++ parsing)
-                pattern = r'\b' + re.escape(symbol_name) + r'\b'
-                if re.search(pattern, line):
-                    # Check if this is not the definition line
+            # Skip comment lines and preprocessor directives
+            if (line.strip().startswith("//") or
+                line.strip().startswith("/*") or
+                    line.strip().startswith("#")):
+                continue
+
+            # Skip if this line is a symbol definition
+            if line_no in definition_lines:
+                continue
+
+            # Check for symbol references
+            for symbol_name, pattern in symbol_patterns.items():
+                if pattern.search(line):
+                    # Skip if this is a definition line for this symbol
                     if (file_path in self.module_symbols and
                         symbol_name in self.module_symbols[file_path] and
                             self.module_symbols[file_path][symbol_name]['line_no'] == line_no):
@@ -505,23 +531,43 @@ class CodebaseVisualizer:
         for symbols_dict in self.module_symbols.values():
             all_symbols.update(symbols_dict.keys())
 
+         # Skip if no symbols to check or file is empty
+        if not all_symbols or not content:
+            return
+
+        # Pre-compile all regex patterns for symbols with meaningful length
+        symbol_patterns = {}
+        for symbol_name in all_symbols:
+            # Skip very short symbols that would cause many false positives
+            if len(symbol_name) > 2:
+                symbol_patterns[symbol_name] = re.compile(
+                    r'\b' + re.escape(symbol_name) + r'\b')
+
         # Process content line by line
         lines = content.splitlines()
 
+        # Skip definition lines for this file
+        definition_lines = {}
+        if file_path in self.module_symbols:
+            for symbol, details in self.module_symbols[file_path].items():
+                definition_lines[details['line_no']] = symbol
+
         for line_no, line in enumerate(lines, 1):
-            # Skip comment lines and import/package declarations
+            # Skip comment lines, imports, and package declarations
             if (line.strip().startswith("//") or
                 line.strip().startswith("/*") or
                 line.strip().startswith("import ") or
                     line.strip().startswith("package ")):
                 continue
 
-            # Look for references to any known symbol
-            for symbol_name in all_symbols:
-                # Simple pattern matching with word boundaries
-                pattern = r'\b' + re.escape(symbol_name) + r'\b'
-                if re.search(pattern, line):
-                    # Check if this is not the definition line
+            # Skip if this line is a symbol definition
+            if line_no in definition_lines:
+                continue
+
+            # Check for symbol references
+            for symbol_name, pattern in symbol_patterns.items():
+                if pattern.search(line):
+                    # Skip if this is a definition line for this symbol
                     if (file_path in self.module_symbols and
                         symbol_name in self.module_symbols[file_path] and
                             self.module_symbols[file_path][symbol_name]['line_no'] == line_no):
@@ -541,23 +587,43 @@ class CodebaseVisualizer:
         for symbols_dict in self.module_symbols.values():
             all_symbols.update(symbols_dict.keys())
 
+         # Skip if no symbols to check or file is empty
+        if not all_symbols or not content:
+            return
+
+        # Pre-compile all regex patterns
+        symbol_patterns = {}
+        for symbol_name in all_symbols:
+            # Only create patterns for symbols with reasonable length (avoid single-character symbols)
+            if len(symbol_name) > 2:
+                symbol_patterns[symbol_name] = re.compile(
+                    r'\b' + re.escape(symbol_name) + r'\b')
+
         # Process content line by line
         lines = content.splitlines()
 
+        # Skip definition lines for this file
+        definition_lines = {}
+        if file_path in self.module_symbols:
+            for symbol, details in self.module_symbols[file_path].items():
+                definition_lines[details['line_no']] = symbol
+
         for line_no, line in enumerate(lines, 1):
-            # Skip comment lines and import/package declarations
+            # Skip comment lines, imports, and package declarations
             if (line.strip().startswith("//") or
                 line.strip().startswith("/*") or
                 line.strip().startswith("import ") or
                     line.strip().startswith("package ")):
                 continue
 
-            # Look for references to any known symbol
-            for symbol_name in all_symbols:
-                # Simple pattern matching with word boundaries
-                pattern = r'\b' + re.escape(symbol_name) + r'\b'
-                if re.search(pattern, line):
-                    # Check if this is not the definition line
+            # Skip if this line is a symbol definition
+            if line_no in definition_lines:
+                continue
+
+            # Check for symbol references
+            for symbol_name, pattern in symbol_patterns.items():
+                if pattern.search(line):
+                    # Skip if this is a definition line for this symbol
                     if (file_path in self.module_symbols and
                         symbol_name in self.module_symbols[file_path] and
                             self.module_symbols[file_path][symbol_name]['line_no'] == line_no):
