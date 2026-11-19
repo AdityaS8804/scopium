@@ -1,0 +1,14 @@
+# secrets
+*.pem
+.env
+*.env
+!.env.temp
+
+# python
+__pycache__/
+venv/
+.venv/
+
+# misc
+.DS_Store
+node_modules/
