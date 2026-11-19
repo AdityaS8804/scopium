@@ -1,73 +1,84 @@
-# ✨ Scopium ✨
+# Scopium
 
-## Introduction
+**Chat with any public GitHub repository.** Scopium turns a codebase into a graph of files, classes, functions and the relationships between them, stores it in ArangoDB, and lets an LLM (Mistral) answer questions by querying that graph instead of guessing from loose text chunks. 🏆 1st place at a hackathon.
 
-Welcome to **Scopium** – a cutting-edge multi-chat application integrated with GitHub repository search functionality. This project leverages a graphRAG system using **ArangoDB** and **Networkx**. The entire codebase gets chunked up into *nodes* and relationships between these nodes are captured in the *edges*. Coupling this with our MistralAI implementation, it allows for efficient queries spanning throughout your codebase.  
-It is implemented with a modern **React** frontend styled with **Tailwind CSS** and enhanced by **shadcn UI** components, alongside a robust **Flask** backend. Users can search for any public repository, connect to it, and initiate dedicated chat sessions tailored for each repository. All chat sessions and histories are cached locally, ensuring your conversations persist even after a reload.
+![Scopium UI](https://github.com/user-attachments/assets/ec908e8b-ccc7-4407-aac0-bb3e4304575d)
 
-![image](https://github.com/user-attachments/assets/ec908e8b-ccc7-4407-aac0-bb3e4304575d)
+## What it does
 
+- **Search and connect** to any public GitHub repository from the UI (GitHub App authentication).
+- **One chat per repository**, with history cached in the browser so conversations survive a reload.
+- **Multi-turn questions** such as "where is the auth logic?", "what calls `parse_files`?" or "why would this error happen?", answered with the actual code snippets and file locations.
+- **Graphs are built once and reused.** The first question about a repo clones it and builds its graph. Later questions go straight to the stored graph.
 
----
-## Dataset - Any repo of your choice
-- Our application *dynamically* makes a graph model of any publically available repository of your choice.
-- The in-built github access allows you to choose any repository you want keeping every codebase in your fingertips.
+## How it works
 
-## Associated notebook - 
-- The ipython notebook - ([scopium.ipynb](https://github.com/AdityaS8804/scopium/blob/main/Scopium.ipynb)) explains every process a codebase goes through in detail
+```
+React UI ──POST /api/chat──► Flask server
+                               │
+                 graph for this repo exists in ArangoDB?
+                     │ no                         │ yes
+                     ▼                            │
+       git clone --depth=1 → GraphBuilder         │
+       (parse files → NetworkX DiGraph)           │
+                     │                            │
+                     ▼                            ▼
+              nx-arangodb: store graph ───► GraphQuery + Mistral
+                                             picks a tool, runs it on the graph,
+                                             answers with code and locations
+```
 
-# How to use it
-Given are the detailed step-by-step guide to run this on your local systems.  
-## Pre-requisites
-**Highly recommended to use it on a system with NVIDIA and CUDA enabled**  
+**1. Graph building (`Backend/GraphBuilder.py`).** It parses **Python** (with the `ast` module), **C++, Java and Go** (with pattern matching), and extracts files, classes, functions, imports and cross-file references, with line numbers and surrounding context. Code is also split into chunks so the LLM gets real source, not just names. The result is a NetworkX directed graph, written to ArangoDB through `nx-arangodb`.
 
-Before you begin, ensure you have the following installed:
+**2. Querying (`Backend/GraphQuery.py`).** It's a tool-calling layer on top of the graph. For each question, Mistral (`mistral-large-latest`) chooses which of these tools to run:
 
-- **Node.js** (v14 or higher) and **npm** or **yarn** for the frontend.
-- **Python 3.10+** and **pip** for the backend.
-- A virtual environment tool (e.g., `venv` or `virtualenv`) for Python.
-- **Tailwind CSS** configured with PostCSS (verify your `tailwind.config.js` includes your React files, e.g., `./src/**/*.{js,ts,jsx,tsx}`).
-- **shadcn UI** installed and properly integrated.
+| Tool | Answers |
+|---|---|
+| `find_symbol_occurrences` | Where is this symbol used? |
+| `find_by_name` | Show me this function or class |
+| `analyze_symbol` | What does this function or class do, and what depends on it? |
+| `analyze_error` | Why does this error happen, and where should I look? |
+| `search_code` | Which code mentions this term? |
+| `analyze_code_structure` / `analyze_directory` | How is this part of the project organised? |
 
----
+The tool output, which is real code from the graph, goes back to the model to write the answer, and the conversation history is kept for follow-up questions.
 
-## How to Run
+**3. API (`Backend/server.py`).**
 
-### Frontend
+| Endpoint | Purpose |
+|---|---|
+| `POST /api/github/search` | Search public repositories |
+| `POST /api/github/repos` | List repositories available through the GitHub App |
+| `POST /api/chat` | Ask a question about a repository (builds its graph on first use) |
 
-1. **Navigate to the Frontend Directory:**
-   ```bash
-   cd Frontend
+**4. Frontend (`Frontend/`).** React, TypeScript and Vite, styled with Tailwind CSS and shadcn/ui.
 
-2. **Install Dependencies:**
-   ```bash
-   npm install
+The notebook [`Scopium.ipynb`](Scopium.ipynb) walks through each step a codebase goes through, with examples.
 
-3. **Run the frontend:**
-   ```bash
-   npm run dev
-*Note - if the above method doesn't work, create your own react-vite app with tailwind CSS and shadcn UI setup and copy the src/App.tsx contents into your own src/App.tsx file and run the above commands* 
+## Running it locally
 
-### Backend
+**Prerequisites:** Node.js 14+, Python 3.10+, an ArangoDB instance, a Mistral API key and a GitHub App, for repository access. An NVIDIA GPU with CUDA is recommended.
 
-1. **Navigate to the Backend Directory:**
+**Backend**
+```bash
+python -m venv venv && source venv/bin/activate    # Windows: venv\Scripts\activate
+pip install -r requirements.txt                     # requirements.txt is in the repo root
+cd Backend
+cp .env.temp .env                                   # then fill in the values below
+python server.py                                    # runs on http://127.0.0.1:5000
+```
 
-   ```bash
-   cd Backend
+`.env` needs `ARANGO_HOST`, `ARANGO_USERNAME`, `ARANGO_PASSWORD`, `ARANGO_VERIFY`, `GRAPH_NAME`, `WRITE_BATCH_SIZE` and `MISTRAL_API_KEY`. Keep `.env` and any GitHub App private key out of version control.
 
-2. **Create and Activate a Virtual Environment:**
-   ```bash
-    python -m venv venv
-    # For Linux/Mac:
-    source venv/bin/activate
-    # For Windows:
-    venv\Scripts\activate
+**Frontend**
+```bash
+cd Frontend
+npm install
+npm run dev
+```
 
-3. **Install Required Python Packages:**
-   ```bash
-   pip install -r requirements.txt
-4. **Rename the `.env.temp` to `.env` and fill in the mentioned environment variables**   
-5. **Start the Flask Server:**
-   ```bash
-   python server.py
-  The backend server will run at http://127.0.0.1:5000.
+If the frontend setup gives you trouble, create a fresh React + Vite app with Tailwind CSS and shadcn/ui, and copy `src/App.tsx` into it.
+
+## Tech stack
+
+Python, Flask, NetworkX, ArangoDB (`python-arango`, `nx-arangodb`), Mistral AI, React, TypeScript, Vite, Tailwind CSS, shadcn/ui.
